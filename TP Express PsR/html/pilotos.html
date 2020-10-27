@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Bruno Romero, Camila Tello, Azael Ortino y Henri Penicaud">
+    <meta name="generator" content="Jekyll v4.0.1">
+    <title>FORMULA 1 - PILOTOS</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/pilotos/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="pilotos.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">CAMPEONATO</h4>
+          <li><a href="equipos.html" class="text-white">EQUIPOS</a></li>
+            <li><a href="calendario.html" class="text-white">CALENDARIO</a></li>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Redes Sociales</h4>
+          <ul class="list-unstyled">
+            <li><a href="https://twitter.com/F1" class="text-blue">Siguenos en Twitter</a></li>
+            <li><a href="https://www.instagram.com/f1/" class="text-danger">Siguenos en Instagram</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <h3>FORMULA 1</h3>
+        <strong></strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h2>PILOTOS</h2>
+    </div>
+  </section>
+  <div class="col-2">
+  
+  </div>
+</div>
+</div>
+
+
+  <div class="album container py-3 col-12 bg-light" >
+    <div class="row" id="contenedorPersonajes"></div>
+  </div>
+
+</main>
+
+<footer class="text-white">
+  <div class="container">
+    <p class="float-right">
+    </p>
+    <a>Esto no es para nada una copia de la pagina oficial de Formula 1 
+  </div>
+</footer>
+    <!-- Modal -->
+    <div class="modal fade" id="crearPersonaje" tabindex="-1" role="dialog" aria-labelledby="crearPersonajeLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+
+
+    <script>
+      function crearLineaPersonaje(personaje){
+        let color = personaje.color? personaje.color : "white";
+        $("#contenedorPersonajes").append(
+                '<div class="card col-2 shadow-sm">' +
+                '            <img class="bd-placeholder-img card-img-top" width="100%"  src="'+personaje.foto+'"/> '+
+                '            <div class="card-body">' +
+                '              <h6 class="text-center card-text">'+personaje.nombre+' </h6>' +
+                '              <div class="d-flex justify-content-between align-items-center">' +
+                '                <div class="btn-group">' +
+                '                  <a href="infoequipos.html?id='+personaje.equipo+'" style="background-color: '+color+'; <button type="button" class="badge badge-primary">Equipo</a>' +
+                '                </div>' +
+                '              </div>' +
+                '            </div>' +
+                '          </div>');
+      }
+      var personajes = [];
+      var personajesBuscados = [];
+      $(document).ready(function () {
+
+
+        $("#buscador").change(function() {
+          console.log($("#buscador").val().toLowerCase());
+          personajesBuscados = personajes.filter(function(personaje){
+              return personaje.id.indexOf($("#buscador").val().toLowerCase()) !== -1;
+          });
+          $("#contenedorPersonajes").html("");
+          personajesBuscados.forEach(function(personaje){
+            crearLineaPersonaje(personaje);
+          });
+
+        });
+
+
+        $('#formCrearPersonaje').on('submit', function (event) {
+          event.preventDefault();
+          $.ajax({
+            url: 'http://localhost:3000/personajes',
+            type: 'POST',
+            data: {
+              id: $("#nombre").val().toLowerCase(),
+              nombre: $("#nombre").val(),
+              id: $("#id").val(),
+              foto: $("#imagen").val(),
+            },
+            success: function(result) {
+              $("#crearPersonaje").modal("hide");
+              alert("Se creo el piloto")
+              location.reload();
+            }
+          });
+        });
+
+      $.get( "http://localhost:3000/personajes", function( data ) {
+          personajes = data.response;
+
+          data.response.forEach(function(personaje){
+              crearLineaPersonaje(personaje);
+          })
+      })
+    });
+
+    </script>
+
+</html>

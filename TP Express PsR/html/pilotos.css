@@ -1,0 +1,39 @@
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #ff9900;
+}
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+  background-color: #0c0c0c;
+}
+
+.jumbotron h1 {
+  font-weight: 3;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f78d8d;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.black-background {background-color:#a3a3a3;}
+.white {color:#000000;}
+
