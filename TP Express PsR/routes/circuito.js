@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 var circuito =[
   {
     "id": "1",
@@ -14,6 +13,9 @@ var circuito =[
     "lap_record" : "1:05.619 Carlos Sainz (2020)",
     "url" : "url",
     "date" : "05-07-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/chalec01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lannor01.png.transform/2col/image.png"
   },
   {
     "id": "2",
@@ -26,6 +28,9 @@ var circuito =[
     "lap_record" : "1:05.619 Carlos Sainz (2020)",
     "url" : "url",
     "date" : "12-07-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png"
   },
    {
     "id": "3",
@@ -38,6 +43,9 @@ var circuito =[
     "lap_record" : "1:17.103 Max Verstappen (2019)",
     "url" : "url",
     "date" : "19-07-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png"
   },
   {
     "id": "4",
@@ -50,6 +58,9 @@ var circuito =[
     "lap_record" : "1:27.097 Max Verstappen (2020)",
     "url" : "url",
     "date" : "02-08-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/chalec01.png.transform/2col/image.png"
   },
   {
     "id": "5",
@@ -62,6 +73,9 @@ var circuito =[
     "lap_record" : "1:27.097 Max Verstappen (2020)",
     "url" : "url",
     "date" : "09-08-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png"
   },
   {
     "id": "6",
@@ -74,6 +88,9 @@ var circuito =[
     "lap_record" : "1:18.183 Valtteri Bottas (2020)",
     "url" : "url",
     "date" : "16-08-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png"
   },
   {
     "id": "7",
@@ -86,6 +103,9 @@ var circuito =[
     "lap_record" : "1:46.286 Valtteri Bottas (2018)",
     "url" : "url",
     "date" : "30-08-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png"
   },
   {
     "id": "8",
@@ -98,6 +118,9 @@ var circuito =[
     "lap_record" : "1:21.046 Rubens Barrichello (2004)",
     "url" : "url",
     "date" : "06-09-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/piegas01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/carsai01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lanstr01.png.transform/2col/image.png"
   },
   {
     "id": "9",
@@ -110,6 +133,9 @@ var circuito =[
     "lap_record" : "1:18.833 Lewis Hamilton (2020)",
     "url" : "url",
     "date" : "13-09-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/alealb01.png.transform/2col/image.png"
   },
   {
     "id": "10",
@@ -122,6 +148,9 @@ var circuito =[
     "lap_record" : "1:35.761 Lewis Hamilton (2019)",
     "url" : "url",
     "date" : "27-09-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png"
   },
   {
     "id": "11",
@@ -134,6 +163,9 @@ var circuito =[
     "lap_record" : " 1:27.961 Takuma Sato (2004)",
     "url" : "url",
     "date" : "11-10-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/danric01.png.transform/2col/image.png"
   },
   {
     "id": "12",
@@ -146,6 +178,9 @@ var circuito =[
     "lap_record" : "(null)",
     "url" : "url",
     "date" : "25-10-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/maxver01.png.transform/2col/image.png"
   },
   {
     "id": "13",
@@ -158,6 +193,9 @@ var circuito =[
     "lap_record" : "1:21.858 Michael Schumacher (2005)",
     "url" : "url",
     "date" : "01-11-2020",
+    "pri" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/lewham01.png.transform/2col/image.png",
+    "seg" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/valbot01.png.transform/2col/image.png",
+    "ter" : "https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/drivers/2020/danric01.png.transform/2col/image.png"
   },
   {
     "id": "14",
@@ -170,6 +208,9 @@ var circuito =[
     "lap_record" : "1:24.770 Juan Pablo Montoya (2005)",
     "url" : "url",
     "date" : "15-11-2020",
+    "pri" : "",
+    "seg" : "",
+    "ter" : ""
   },
   {
     "id": "15",
@@ -182,6 +223,9 @@ var circuito =[
     "lap_record" : "1:31.447 Pedro de la Rosa (2005)",
     "url" : "url",
     "date" : "29-11-2020",
+    "pri" : "",
+    "seg" : "",
+    "ter" : ""
   }, 
   {
     "id": "16",
@@ -194,6 +238,9 @@ var circuito =[
     "lap_record" : "(null)",
     "url" : "url",
     "date" : "06-12-2020",
+    "pri" : "",
+    "seg" : "",
+    "ter" : ""
   },
   {
     "id": "17",
@@ -206,6 +253,9 @@ var circuito =[
     "lap_record" : "1:39.283 Lewis Hamilton (2019)",
     "url" : "url",
     "date" : "13-12-2020",
+    "pri" : "",
+    "seg" : "",
+    "ter" : ""
   },
 ]
 

@@ -4,7 +4,6 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 
-
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var personajesRouter = require('./routes/personajes');
@@ -34,5 +33,6 @@ app.use('/dorsal1', equipoRouter);
 app.use('/dorsal2', equipoRouter);   
 app.use('/icon', personajesRouter);
 app.use('/country', personajesRouter);
+app.use('/country', circuitoRouter);
 module.exports = app;
   

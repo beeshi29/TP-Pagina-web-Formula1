@@ -49,8 +49,8 @@
   </div>
   <div class="navbar navbar-dark bg-dark shadow-sm">
     <div class="container d-flex justify-content-between">
-      <a href="#" class="navbar-brand d-flex align-items-center">
-        <h3>FORMULA 1</h3>
+      <a class="navbar-brand d-flex align-items-center">
+        <h3>Formula 1 Not Official Page</h3>
         <strong></strong>
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
@@ -110,7 +110,7 @@
                 '<div class="card col-2 shadow-sm">' +
                 '            <img class="bd-placeholder-img card-img-top" width="50%" src="'+circuito.image+'"/> '+
                 '            <div class="card-body">' +
-                '            <div class= "text-center alert alert-danger" role="alert-link">'+circuito.country+'</div>'+
+                '             <a href="infocircuito.html" class= "text-center alert alert-danger" role="alert-link">'+circuito.country+'</a> '+
                 '              <div class="d-flex justify-content-between align-items-center">' +
                 '                <div class="card-body">'+   
                 '                 <h6 class="text-center card-text">'+circuito.date+'</h6>' +
@@ -151,7 +151,7 @@
             },
             success: function(result) {
               $("#crearPersonaje").modal("hide");
-              alert("Se creo el piloto")
+              alert("Se creo el circuito")
               location.reload();
             }
           });

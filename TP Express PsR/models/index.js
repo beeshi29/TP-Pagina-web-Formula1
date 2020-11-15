@@ -14,7 +14,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 db.sequelize = sequelize;
 
-db.piloto = require("./pilotos")(sequelize, Sequelize);
+db.piloto = require("./piloto")(sequelize, Sequelize);
 db.circuitos = require("./circuito")(sequelize, Sequelize);
 db.equipo = require("./equipo")(sequelize, Sequelize);
 
@@ -23,10 +23,9 @@ db.equipo = require("./equipo")(sequelize, Sequelize);
 db.piloto.hasMany(db.equipo,{
     foreignKey : 'id_personaje',
 });
-db.equipo.belongsTo(db.personajes,{
+db.equipo.belongsTo(db.piloto,{
     foreignKey : 'id',
 });
-
 
 
 module.exports = db;
